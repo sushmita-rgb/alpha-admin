@@ -97,16 +97,18 @@ src/
 ## 🖼️ Application Showcases
 
 #### 🔑 Login Interface
-![Login Showcase](https://raw.githubusercontent.com/sushmita-rgb/alpha-admin/main/src/assets/login_placeholder.png)
+![Login Showcase](<img width="2872" height="1462" alt="image" src="https://github.com/user-attachments/assets/7c098304-9045-4902-b715-824b9a169a8c" />
+)
 
 #### 📈 Analytics Dashboard
-![Dashboard Showcase](https://raw.githubusercontent.com/sushmita-rgb/alpha-admin/main/src/assets/dashboard_placeholder.png)
+![Dashboard Showcase](<img width="2864" height="1438" alt="image" src="https://github.com/user-attachments/assets/8ba0725d-3b6c-475d-9179-64ccea3b0254" />
+)
 
-#### 📦 Catalog Inventory
-![Catalog Showcase](https://raw.githubusercontent.com/sushmita-rgb/alpha-admin/main/src/assets/catalog_placeholder.png)
+
 
 #### ⚙️ Settings Panel
-![Settings Showcase](https://raw.githubusercontent.com/sushmita-rgb/alpha-admin/main/src/assets/settings_placeholder.png)
+![Settings Showcase](<img width="2558" height="1018" alt="image" src="https://github.com/user-attachments/assets/5703b040-4e3f-4fce-863b-672668f63e1a" />
+)
 
 ---
 
