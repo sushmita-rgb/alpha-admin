@@ -97,18 +97,13 @@ src/
 ## 🖼️ Application Showcases
 
 #### 🔑 Login Interface
-![Login Showcase](<img width="2872" height="1462" alt="image" src="https://github.com/user-attachments/assets/7c098304-9045-4902-b715-824b9a169a8c" />
-)
+![Login Showcase](public/assets/login.png)
 
 #### 📈 Analytics Dashboard
-![Dashboard Showcase](<img width="2864" height="1438" alt="image" src="https://github.com/user-attachments/assets/8ba0725d-3b6c-475d-9179-64ccea3b0254" />
-)
-
-
+![Dashboard Showcase](public/assets/dashboard.png)
 
 #### ⚙️ Settings Panel
-![Settings Showcase](<img width="2558" height="1018" alt="image" src="https://github.com/user-attachments/assets/5703b040-4e3f-4fce-863b-672668f63e1a" />
-)
+![Settings Showcase](public/assets/setting.png)
 
 ---
 
