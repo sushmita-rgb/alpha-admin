@@ -88,7 +88,7 @@ export default function DashboardLayout() {
       name: 'Settings',
       path: '/settings',
       icon: <Settings className="w-4 h-4" />,
-      roles: ['admin'],
+      roles: ['admin', 'user'],
     },
   ];
 
@@ -115,9 +115,11 @@ export default function DashboardLayout() {
         {/* Brand Logo Header */}
         <div className="h-14 flex items-center px-4.5 border-b border-notion-border dark:border-notion-dark-border justify-between">
           <Link to="/" className="flex items-center gap-2 font-bold text-sm select-none">
-            <div className="w-6 h-6 rounded-md bg-notion-accent flex items-center justify-center text-white text-xs">
-              A
-            </div>
+            <img 
+              src="/alpha1-removebg-preview.png" 
+              alt="Alpha Logo" 
+              className="w-6 h-6 object-contain bg-transparent filter brightness-115 dark:brightness-105" 
+            />
             {!sidebarCollapsed && (
               <span className="text-notion-text dark:text-notion-dark-text tracking-tight font-bold">
                 Alpha
@@ -145,6 +147,36 @@ export default function DashboardLayout() {
             </NavLink>
           ))}
         </nav>
+
+        {/* User Profile Summary at bottom */}
+        <div className="p-3 border-t border-notion-border dark:border-notion-dark-border space-y-2 bg-notion-bg/30 dark:bg-notion-dark-card/30">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <img 
+              src={user?.avatar || "/default-avatar.png"} 
+              alt={user?.name} 
+              className="w-7 h-7 rounded object-cover border border-notion-border dark:border-[#333]" 
+            />
+            {!sidebarCollapsed && (
+              <div className="min-w-0 flex-1">
+                <span className="text-[11px] font-bold text-notion-text dark:text-white block truncate leading-tight">
+                  {user?.name}
+                </span>
+                <span className="text-[9px] text-notion-muted dark:text-notion-dark-muted block truncate capitalize">
+                  {user?.role}
+                </span>
+              </div>
+            )}
+          </div>
+          {!sidebarCollapsed && (
+            <button 
+              onClick={handleLogout}
+              className="w-full flex items-center justify-center gap-1.5 py-1.5 rounded bg-notion-bg hover:bg-notion-hover dark:bg-[#1E1E1E] dark:hover:bg-[#2A2A2D] text-[10px] font-bold text-rose-600 dark:text-rose-455 transition-colors cursor-pointer border border-notion-border/50 dark:border-[#333]/30"
+            >
+              <LogOut className="w-3 h-3" />
+              <span>Sign Out</span>
+            </button>
+          )}
+        </div>
 
         {/* Sidebar Footer Collapse Toggle */}
         <div className="p-3.5 border-t border-notion-border dark:border-notion-dark-border flex justify-end">
@@ -179,9 +211,11 @@ export default function DashboardLayout() {
             >
               <div className="flex items-center justify-between mb-6">
                 <Link to="/" className="flex items-center gap-2 font-bold text-sm">
-                  <div className="w-6 h-6 rounded-md bg-notion-accent flex items-center justify-center text-white text-xs">
-                    A
-                  </div>
+                  <img 
+                    src="/alpha1-removebg-preview.png" 
+                    alt="Alpha Logo" 
+                    className="w-6 h-6 object-contain bg-transparent filter brightness-115 dark:brightness-105" 
+                  />
                   <span>Alpha</span>
                 </Link>
                 <button 

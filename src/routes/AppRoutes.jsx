@@ -37,12 +37,12 @@ export default function AppRoutes() {
             {/* Common Authenticated Routes */}
             <Route path="/products" element={<ProductsList />} />
             <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/settings" element={<Settings />} />
             
             {/* Admin-only Routes */}
             <Route element={<PrivateRoute allowedRoles={['admin']} />}>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/analytics" element={<Analytics />} />
-              <Route path="/settings" element={<Settings />} />
             </Route>
           </Route>
         </Route>
