@@ -135,15 +135,21 @@ export default function DashboardLayout() {
               key={item.name}
               to={item.path}
               className={({ isActive }) => `
-                flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-semibold transition-colors group
+                flex items-center gap-3 py-2 rounded-lg text-xs font-semibold transition-all duration-150 group
                 ${isActive 
-                  ? 'bg-notion-selected dark:bg-notion-dark-selected text-notion-accent dark:text-notion-dark-accent shadow-sm' 
-                  : 'text-notion-muted dark:text-notion-dark-muted hover:bg-notion-hover dark:hover:bg-notion-dark-hover hover:text-notion-text dark:hover:text-notion-dark-text'
+                  ? 'bg-[#3B82F6]/12 text-white pl-[9px] border-l-[3px] border-[#3B82F6] rounded-l-none' 
+                  : 'text-white/65 hover:bg-white/5 hover:text-white pl-3'
                 }
               `}
             >
-              <div className="flex-shrink-0">{item.icon}</div>
-              {!sidebarCollapsed && <span>{item.name}</span>}
+              {({ isActive }) => (
+                <>
+                  <div className={`flex-shrink-0 transition-colors ${isActive ? 'text-[#3B82F6]' : 'text-white/50 group-hover:text-white/80'}`}>
+                    {item.icon}
+                  </div>
+                  {!sidebarCollapsed && <span>{item.name}</span>}
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
