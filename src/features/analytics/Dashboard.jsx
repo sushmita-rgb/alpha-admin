@@ -311,10 +311,10 @@ export default function Dashboard() {
               <Link 
                 key={p.id}
                 to={`/products/${p.id}`}
-                className="group p-3 bg-notion-hover dark:bg-notion-dark-hover border border-notion-border dark:border-notion-dark-border/40 rounded-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between h-36"
+                className="group p-3 bg-notion-hover dark:bg-notion-dark-hover border border-notion-border dark:border-notion-dark-border/40 rounded-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between h-auto min-h-[165px]"
               >
                 <div className="space-y-1.5">
-                  <div className="aspect-[4/3] rounded overflow-hidden bg-white dark:bg-notion-dark-card flex items-center justify-center p-1.5 border border-notion-border dark:border-notion-dark-border/30">
+                  <div className="h-20 w-full rounded overflow-hidden bg-white dark:bg-notion-dark-card flex items-center justify-center p-1 border border-notion-border dark:border-notion-dark-border/30">
                     <img src={p.thumbnail} alt={p.title} className="max-h-full max-w-full object-contain" />
                   </div>
                   <h5 className="font-bold text-[11px] text-notion-text dark:text-notion-dark-text truncate group-hover:text-notion-accent transition-colors">{p.title}</h5>
